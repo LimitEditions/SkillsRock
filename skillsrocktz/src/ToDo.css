@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: mediumblue;
+}
+
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 20px;
+margin-bottom: 70px;
+}
+
+.todo__task {
+  display: flex;
+  gap: 10px;
+}
+
+.todo__task_text {
+  padding: 5px;
+  height: 30px;
+  width: 300px;
+  border-color: darkblue;
+  border-radius: 15px;
+}
+
+.todo__task_btn {
+  width: 100px;
+  background-color: cornsilk;
+  color: darkblue;
+  border: none;
+  border-radius: 10px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.filter-section { 
+  display: flex; 
+  gap: 10px;
+  margin-bottom: 10px; 
+} 
+
+.filter-section button { 
+  width: 100px;
+  margin: 2px; 
+  padding: 8px; 
+  border: none; 
+  cursor: pointer; 
+  color:darkblue; 
+  border-radius: 10px; 
+  background-color: cornsilk; 
+} 
+
+.filter-section button.active { 
+  background-color: darkblue; 
+  color: cornsilk; 
+}
+
+.taskList {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.completed .task-text {
+  text-decoration: line-through;
+  color: #aaa;
+}
