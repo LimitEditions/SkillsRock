@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import ToDo from './ToDo';
 import GetUsers from './GetUsers';
+import Slider from './Slider';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -10,6 +11,7 @@ root.render(
   <React.StrictMode>
     <ToDo />
     <GetUsers />
+    <Slider />
   </React.StrictMode>
 );
 

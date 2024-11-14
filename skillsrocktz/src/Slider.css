@@ -1,0 +1,13 @@
+.slider {
+    display: flex; 
+    gap: 25px;
+}
+
+.slider__group {
+    display: flex;
+    gap: 25px;
+}
+.slider__img {
+    width: 70px;
+    height: 70px;
+}

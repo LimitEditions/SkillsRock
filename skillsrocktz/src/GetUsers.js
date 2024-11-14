@@ -6,25 +6,26 @@ function GetUsers() {
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    // Функция для загрузки случайных пользователей
-    const fetchRandomUsers = async () => {
-        setIsLoading(true);
-        setError(null);
-
-        try {
-            const response = await fetch('https://randomuser.me/api/?results=10');
-            if (!response.ok) {
-                throw new Error('Ошибка загрузки данных');
+        // Функция для загрузки случайных пользователей
+        const fetchRandomUsers = async () => {
+            setIsLoading(true);
+            setError(null);
+    
+            try {
+                const response = await fetch('https://randomuser.me/api/?results=10');
+                if (!response.ok) {
+                    throw new Error('Ошибка загрузки данных');
+                }
+                const data = await response.json();
+                setUsers(data.results);
+            } catch (error) {
+                setError(error.message);
+            } finally {
+                setIsLoading(false);
             }
-            const data = await response.json();
-            setUsers(data.results);
-        } catch (error) {
-            setError(error.message);
-        } finally {
-            setIsLoading(false);
-        }
-    };
+        };
 
+// используем функцию fetchRandomUsers() при монтировании компонента
     useEffect(() => {
         fetchRandomUsers();
     }, []);
