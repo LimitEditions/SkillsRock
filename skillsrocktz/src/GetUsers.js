@@ -46,7 +46,7 @@ function GetUsers() {
                     <li className="user" key={index}>
                     <h3>Name: {user.name.first}</h3>
                     <h4>email: {user.email}</h4>
-                    <img src={user.picture.thumbnail} alt={user.name.first}/>
+                    <img src={user.picture.large} alt={user.name.first}/>
                 </li>))}
             </ol>
 

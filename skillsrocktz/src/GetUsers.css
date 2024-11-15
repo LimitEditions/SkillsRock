@@ -1,0 +1,22 @@
+.users {
+    margin: 20px;
+}
+
+.users__list {
+    list-style: none;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr)
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: darkblue;
+}
+
+.user img {
+    width: 100px;
+    height: 100px;
+}
